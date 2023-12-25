@@ -3,7 +3,7 @@ const randomNumber = parseInt(Math.random() * 100 + 1);
 const pre = [];
 
 const home = document.querySelector("form");
-const guess = document.querySelector("#guessField").value;
+console.log(guess);
 const submit = document.querySelector("#subt");
 const previous = document.querySelector(".guesses");
 
@@ -11,16 +11,17 @@ const remaining = document.querySelector(".lastResult");
 const result = document.querySelector("#results");
 
 home.addEventListener("submit", (e) => {
-    e.preventDefault();
-    console.log(guess)
-    valid(guess);
+  e.preventDefault();
+  const guess = document.querySelector("#guessField").value;
+  
+  console.log(guess);
+  valid(guess);
 });
- 
 
 function valid(guess) {
   if (isNaN(guess) || guess < 1 || guess > 100) {
-  } else {
     result.innerHTML = "Invalid Input";
+  } else {
     check(guess);
   }
 }
@@ -33,6 +34,5 @@ function check(guess) {
   } else if (guess == randomNumber) {
     result.innerHTML = "Congractulation you guesed the right number";
   }
-  pre.push(guess)
-//   guess=
+  pre.push(guess);
 }
