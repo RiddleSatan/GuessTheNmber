@@ -1,3 +1,9 @@
+/* *{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+} */
+
 html {
     font-family: sans-serif;
   }
@@ -10,6 +16,8 @@ html {
     background-color: #212121;
   }
   
+
+
   .lastResult {
     color: white;
     padding: 7px;
@@ -40,7 +48,7 @@ html {
     border-radius: 10px;
     font-size: 20px;
     border-style: none;
-    margin-top: 50px;
+    margin-top: 13px;
     /* margin-left: 75px; */
   }
   
@@ -91,10 +99,11 @@ html {
   }
   
   #results {
-    width: auto;
+    width: 50vh;
     height: 10vh;
     font-size: 35px;
-    margin-left: 90px;
-    margin-top: 20px;
+    margin: 0 auto;
+    /* margin-left: px; */
+    margin-top:5px;
     color: rgb(247, 9, 9);
   }
